@@ -81,10 +81,7 @@ const config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: {
-        label: 'MARIABOSCH',  // Texto visible
-        to: '/',              // Enlace a página principal
-      },
+      title: 'MARIABOSCH', // CORREGIDO: Solo string, no objeto
       hideOnScroll: true,
       items: [
         {

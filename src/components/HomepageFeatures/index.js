@@ -20,7 +20,7 @@ function HomepageHero() {
       {/* SECCIÓN 1: Hero con video de fondo */}
       <section className={styles.hero}>
         <video className={styles.videoBg} autoPlay loop muted playsInline>
-          <source src="/img/loop video.mov" type="video/mp4" />
+          <source src="/img/loop video.mp4" type="video/mp4" />
           Tu navegador no soporta video HTML5.
         </video>
       </section>
