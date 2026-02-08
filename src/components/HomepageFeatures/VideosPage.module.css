@@ -1,0 +1,24 @@
+/* VideosPage.module.css */
+.container {
+  padding: 60px 40px;
+  min-height: 100vh;
+  background: #e0e0e0;
+}
+
+.titulo {
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+}
+
+.backButton {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  padding: 12px 24px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

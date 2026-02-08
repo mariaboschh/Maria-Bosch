@@ -1,30 +1,131 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: hsl(0, 0%, 17%);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.navbar__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'VT323', monospace;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 86px;
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme='dark'] .navbar {
+  border-color: #ffffff;
+  background-color: #1a1a1a !important;
+}
+
+body[data-theme='dark']::before {
+  background-color: #000000;
+}
+
+@media (max-width: 996px) {
+  .navbar {
+    border-radius: 16px;
+    max-width: calc(100% - 24px);
+  }
+  
+  body::before {
+    height: 76px;
+  }
+}
+
+.navbar__items--left,
+.navbar__items--right {
+  flex: 0 !important;
+}
+
+.navbar__items--left .navbar__item {
+  position: absolute !important;
+  right: calc(50% + 120px) !important;
+  white-space: nowrap;
+}
+
+.navbar__items--right .navbar__item {
+  position: absolute !important;
+  left: calc(50% + 120px) !important;
+  white-space: nowrap;
+}
+
+.footer {
+  position: relative !important;
+  height: 40px !important;
+  padding: 8px 0 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  z-index: 1000 !important;
+}
+
+.footer__container {
+  max-width: 100% !important;
+  padding: 0 20px !important;
+  margin: 0 auto !important;
+}
+
+.footer__links {
+  display: none !important;
+}
+
+.footer__copyright {
+  text-align: center !important;
+  font-size: 0.8rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #666 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+[data-theme='dark'] .footer {
+  background: rgba(26, 26, 26, 0.95) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme='dark'] .footer__copyright {
+  color: #aaa !important;
+}
+
+main {
+  margin-bottom: 60px !important;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 35px !important;
+    padding: 5px 0 !important;
+  }
+  
+  .footer__copyright {
+    font-size: 0.7rem !important;
+  }
+  
+  main {
+    margin-bottom: 50px !important;
+  }
 }
