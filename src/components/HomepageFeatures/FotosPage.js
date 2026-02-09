@@ -18,6 +18,11 @@ function FotosPage({ onBack }) {
         alt="SD Xina"
         className={styles.sdxina}
       />
+      <img
+        src={require("/img/sd cultura.png").default}
+        alt="SD Cultura"
+        className={styles.sdcultura}
+      />
     </div>
   );
 }

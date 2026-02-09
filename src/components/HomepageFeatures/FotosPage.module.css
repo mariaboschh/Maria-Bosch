@@ -25,7 +25,7 @@
 
 /* Estilos para sdkyrgy */
 .sdkyrgy {
-  width: 250px; /* o el tamaño que prefieras */
+  width: 200px; /* o el tamaño que prefieras */
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -41,7 +41,7 @@
 }
 
 .sdxina {
-  width: 250px; /* o el tamaño que prefieras */
+  width: 200px; /* o el tamaño que prefieras */
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -50,6 +50,22 @@
 }
 
 .sdxina:hover {
+  transform: translateY(-15px) scale(1.05); /* Mueve arriba y agranda */
+  filter: 
+    drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25))
+    drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+.sdcultura {
+  width: 200px; /* o el tamaño que prefieras */
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  position:absolute;
+  left: 1000px;
+}
+
+.sdcultura:hover {
   transform: translateY(-15px) scale(1.05); /* Mueve arriba y agranda */
   filter: 
     drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25))
