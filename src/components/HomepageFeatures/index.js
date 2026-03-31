@@ -35,31 +35,25 @@ function HomepageHero() {
         <div className="menu">
           <div className={styles.inner}>
             {/* Botón para Fotos */}
-            <button 
-              onClick={() => setPaginaActual('fotos')}
-              className={styles.polaroidLink}
-            >
               <img
                 src={require("/img/polaroid foto.png").default}
                 alt="polaroid foto"
                 className={styles.polaroidfoto}
+                onClick={() => setPaginaActual('fotos')}
               />
-            </button>
+                   
             
-            {/* Botón para Videos */}
-            <button 
-              onClick={() => setPaginaActual('videos')}
-              className={styles.videoLink}
-            >
               <video
                 src={require("/img/video old.mp4").default}
                 autoPlay
                 muted
                 loop
                 playsInline
+                 onClick={() => setPaginaActual('videos')}
                 className={styles.videoold}
+        
               />
-            </button>
+            
             
             <div className={styles.galeria}>
               {/* Galería content */}

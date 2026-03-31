@@ -45,22 +45,14 @@ const config = {
     },
     
     navbar: {
-      title: 'MARIABOSCH',
-      hideOnScroll: false,
-      // Aquí van los items de navegación: FOTO a la izquierda, VIDEO a la derecha
-      items: [
-        {
-          label: 'FOTO',
-          to: '/foto',
-          position: 'left',
-        },
-        {
-          label: 'VIDEO',
-          to: '/video',
-          position: 'right',
-        },
-      ],
-    },
+  title: 'MARIABOSCH',
+  hideOnScroll: false,
+  
+  items: [
+    { label: 'FOTO', to: '/foto', position: 'left' },
+    { label: 'VIDEO', to: '/video', position: 'right' },
+  ],
+},
     
     footer: {
       style: 'light',
