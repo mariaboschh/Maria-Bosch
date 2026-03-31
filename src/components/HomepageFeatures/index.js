@@ -23,6 +23,11 @@ function HomepageHero() {
           <source src="/img/loop video.mp4" type="video/mp4" />
           Tu navegador no soporta video HTML5.
         </video>
+
+        {/* Flecha dentro del hero (para posicionarse correctamente) */}
+        <div className={styles.fletxa}>
+          <img src="/img/fletxa.png" alt="scroll down" />
+        </div>
       </section>
 
       {/* SECCIÓN 2: Nueva sección */}
