@@ -41,15 +41,14 @@ function HomepageHero() {
                 className={styles.polaroidfoto}
                 onClick={() => setPaginaActual('fotos')}
               />
-                   
-            
+                             
               <video
                 src={require("/img/video old.mp4").default}
                 autoPlay
                 muted
                 loop
                 playsInline
-                 onClick={() => setPaginaActual('videos')}
+                onClick={() => setPaginaActual('videos')}
                 className={styles.videoold}
         
               />
