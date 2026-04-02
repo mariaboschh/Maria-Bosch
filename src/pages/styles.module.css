@@ -1,17 +1,33 @@
 /* src/pages/styles.module.css */
-.sdkyrgy {
-  width: 300px;
-  margin: 20px;
-}
-
-.sdxina {
-  width: 300px;
-  margin: 20px;
-}
-
+/* Estil comú per totes les fotos */
+.sdkyrgy,
+.sdxina,
 .sdcultura {
-  width: 300px;
-  margin: 20px;
+  width: 200px;           
+  display: inline-block;   
+  margin-right: 20px;      
+  margin-top: 40px;       /* fa que totes baixin una mica */
+  transition: transform 0.3s;
+  cursor: pointer;
+  vertical-align: bottom;  
+}
+
+/* La imatge de Xina una mica més alta */
+.sdxina {
+  vertical-align: top;     
+}
+
+/* Espai extra a la dreta de l’última imatge */
+.sdcultura {
+  margin-right: 50px;     
+}
+
+/* Hover per agrandar lleugerament */
+.sdkyrgy:hover,
+.sdxina:hover,
+.sdcultura:hover {
+  transform: scale(1.05);
+  z-index: 10;
 }
 
 /* estilos existentes */

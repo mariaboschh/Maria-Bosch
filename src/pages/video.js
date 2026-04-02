@@ -22,7 +22,7 @@ export default function Video() {
 
         {/* Logo de YouTube com a enllaç */}
         <a
-          href="https://www.youtube.com/@TU_CANAL"
+          href="https://www.youtube.com/@mariaboschh"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.youtubeLogoLink}
