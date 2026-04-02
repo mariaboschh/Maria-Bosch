@@ -44,15 +44,9 @@ const config = {
       respectPrefersColorScheme: true,
     },
     
- navbar: {
+navbar: {
   title: 'MARIABOSCH',
   hideOnScroll: false,
-  logo: {
-    alt: 'MARIABOSCH',
-    href: '/',           // 👈 this makes it go to homepage
-  },
-}
-  
   items: [
     { label: 'FOTO', to: '/foto', position: 'left' },
     { label: 'VIDEO', to: '/video', position: 'right' },
