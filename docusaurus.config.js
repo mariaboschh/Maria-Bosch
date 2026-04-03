@@ -44,21 +44,36 @@ const config = {
       respectPrefersColorScheme: true,
     },
     
-navbar: {
-  title: 'MARIABOSCH',
-  hideOnScroll: false,
-  items: [
-    { label: 'FOTO', to: '/foto', position: 'left' },
-    { label: 'VIDEO', to: '/video', position: 'right' },
-  ],
-},
-    
-    footer: {
-      style: 'light',
-      links: [],
-      copyright: `© ${new Date().getFullYear()} Maria Bosch`,
+    navbar: {
+      title: 'MARIABOSCH',
+      hideOnScroll: false,
+      items: [
+        { label: 'FOTO', to: '/foto', position: 'left' },
+        { label: 'VIDEO', to: '/video', position: 'right' },
+      ],
     },
-  },
-};
 
-module.exports = config;
+footer: {
+  style: 'light',
+  links: [
+    {
+      title: 'Contacte',
+      items: [
+        {
+          label: 'Correu: mbalsius@gmail.com',
+          href: 'mailto:mbalsius@gmail.com',
+        },
+        {
+          label: 'Instagram',
+          href: 'https://www.instagram.com/mariaboschh/',
+          target: '_blank',
+        },
+      ],
+    },
+  ],
+  copyright: `© ${new Date().getFullYear()} Maria Bosch`,
+},
+  }, // <-- Cierre de themeConfig
+}; // <-- Cierre de config
+
+module.exports = config; // <-- Debe ir fuera del objeto config

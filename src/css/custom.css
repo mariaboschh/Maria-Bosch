@@ -203,7 +203,10 @@ main {
 }
 
 .footer__links {
-  display: none !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 20px; /* espacio entre los links */
+  margin-bottom: 4px;
 }
 
 .footer__copyright {
