@@ -14,7 +14,7 @@ export default function Foto() {
         }}
       >
         {/* KYRGY */}
-        <Link to="/fotoskyrgy">
+        <Link to="/kyrgy">
           <img
             src={require('/img/sd kyrgy.png').default}
             alt="SD Kyrgy"
@@ -23,11 +23,13 @@ export default function Foto() {
         </Link>
 
         {/* XINA */}
+        <Link to="/xina">
         <img
           src={require('/img/sd xina.png').default}
           alt="SD Xina"
           className={styles.sdxina}
         />
+          </Link>
 
         {/* CULTURA */}
         <img

@@ -93,3 +93,26 @@
   margin-bottom: 5px;
   text-align: center;
 }
+
+/* Contenedor de la galería */
+.galleryxina {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  justify-content: center;               /* centra la galería horizontalmente */
+  gap: 20px;                             /* espacio entre imágenes */
+}
+
+/* Cada imagen */
+.image {
+  width: 100%;
+  max-width: 400px;   /* opcional: limita el tamaño máximo */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* efecto hover */
+}
+
+/* Efecto hover: un poquito de zoom */
+.image:hover {
+  transform: scale(1.05);
+}

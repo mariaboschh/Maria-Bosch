@@ -1,0 +1,47 @@
+/* Galería */
+.galleryxina {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;          /* ya estaba */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85); /* fondo oscuro más visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;           /* MUY alto para superar navbar */
+  cursor: pointer;
+}
+
+/* Imagen del lightbox */
+.lightboxImage {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 0px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
