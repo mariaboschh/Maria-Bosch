@@ -40,9 +40,11 @@ const config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
-    colorMode: {
-      respectPrefersColorScheme: true,
-    },
+   colorMode: {
+  defaultMode: 'light',
+  disableSwitch: true,
+  respectPrefersColorScheme: false,
+},
     
     navbar: {
       title: 'MARIABOSCH',

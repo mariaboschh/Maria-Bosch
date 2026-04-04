@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import styles from './gallery.module.css'; // tu CSS de galería y lightbox
 
-export default function Kyrgy() {
+export default function Cultura() {
   const images = [
     '/img/kyrgyfotos/GC2A1775.jpg',
     '/img/kyrgyfotos/GC2A1760.jpg',
@@ -42,7 +42,7 @@ export default function Kyrgy() {
   }, [lightboxImg]);
 
   return (
-    <Layout title="Xina">
+    <Layout title="Cultura">
       <main style={{ padding: '40px' }}>
         {/* Galería */}
         <div className={styles.galleryxina}>

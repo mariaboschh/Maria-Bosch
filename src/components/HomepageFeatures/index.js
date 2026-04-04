@@ -4,9 +4,15 @@ import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 
 function HomepageHero() {
+
   const scrollToBottom = () => {
+    const offset = 150;
+
+    const scrollTarget =
+      document.body.scrollHeight - window.innerHeight - offset;
+
     window.scrollTo({
-      top: document.body.scrollHeight,
+      top: scrollTarget,
       behavior: 'smooth',
     });
   };
@@ -20,7 +26,11 @@ function HomepageHero() {
           Tu navegador no soporta video HTML5.
         </video>
 
-        <div className={styles.fletxa} onClick={scrollToBottom} style={{ cursor: 'pointer' }}>
+        <div
+          className={styles.fletxa}
+          onClick={scrollToBottom}
+          style={{ cursor: 'pointer' }}
+        >
           <img src="/img/fletxa.png" alt="scroll down" />
         </div>
       </section>

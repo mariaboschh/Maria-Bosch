@@ -24,19 +24,21 @@ export default function Foto() {
 
         {/* XINA */}
         <Link to="/xina">
-        <img
-          src={require('/img/sd xina.png').default}
-          alt="SD Xina"
-          className={styles.sdxina}
-        />
-          </Link>
+          <img
+            src={require('/img/sd xina.png').default}
+            alt="SD Xina"
+            className={styles.sdxina}
+          />
+        </Link>
 
         {/* CULTURA */}
-        <img
-          src={require('/img/sd cultura.png').default}
-          alt="SD Cultura"
-          className={styles.sdcultura}
-        />
+        <Link to="/cultura">
+          <img
+            src={require('/img/sd cultura.png').default}
+            alt="SD Cultura"
+            className={styles.sdcultura}
+          />
+        </Link>
       </div>
     </Layout>
   );
