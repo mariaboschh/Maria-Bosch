@@ -22,10 +22,6 @@ export default function Madagascar() {
     '/img/madagascarfotos/madagascar16.jpg',
     '/img/madagascarfotos/madagascar17.jpg',
     '/img/madagascarfotos/madagascar18.jpg',
-    '/img/madagascarfotos/madagascar19.jpg',
-    '/img/madagascarfotos/madagascar20.jpg',
-    '/img/madagascarfotos/madagascar21.jpg',
-    '/img/madagascarfotos/madagascar22.jpg',
   ];
 
   const [lightboxImg, setLightboxImg] = useState(null);

@@ -24,8 +24,6 @@ export default function Tanzania() {
     '/img/tanzaniafotos/tanzania18.jpg',
     '/img/tanzaniafotos/tanzania19.jpg',
     '/img/tanzaniafotos/tanzania20.jpg',
-    '/img/tanzaniafotos/tanzania21.jpg',
-    '/img/tanzaniafotos/tanzania22.jpg',
   ];
 
   const [lightboxImg, setLightboxImg] = useState(null);
