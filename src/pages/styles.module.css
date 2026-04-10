@@ -1,39 +1,39 @@
 /* src/pages/styles.module.css */
 
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 60px 40px;
+}
+
+/* CONTENEDOR PERFECTO */
+.containerSD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* separación igual real */
+  margin-top: 80px; /* evita navbar */
+  flex-wrap: wrap; /* por si pantalla pequeña */
+}
+
+/* imágenes */
 .sdkyrgy,
 .sdxina,
+.sdmadagascar,
+.sdtanzania,
 .sdcultura {
   width: 200px;
   transition: transform 0.3s;
   cursor: pointer;
-  position: relative; /* permite mover individualmente */
 }
 
-/* Kyrgy: ligeramente más pequeña y desplazada */
-.sdkyrgy {
-  width: 195px;
-  top: 20px;     /* mueve hacia abajo */
-  left: 30px;    /* mueve hacia la derecha */
-}
-
-/* Xina: más abajo y más a la derecha */
-.sdxina {
-  top: 150px;
-  left: 180px;
-}
-
-/* Cultura: intermedia vertical y más a la derecha */
-.sdcultura {
-  top: 80px;
-  left: 350px;
-}
-
-/* Hover para todas */
+/* hover bonito */
 .sdkyrgy:hover,
 .sdxina:hover,
+.sdmadagascar:hover,
+.sdtanzania:hover,
 .sdcultura:hover {
   transform: scale(1.05);
-  z-index: 10;
 }
 
 .videoxina,

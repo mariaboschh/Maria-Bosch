@@ -2,30 +2,30 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import styles from './gallery.module.css';
 
-export default function Cultura() {
+export default function Madagascar() {
   const images = [
-    '/img/kyrgyfotos/GC2A1775.jpg',
-    '/img/kyrgyfotos/GC2A1760.jpg',
-    '/img/kyrgyfotos/GC2A1322.jpg',
-    '/img/kyrgyfotos/GC2A1331.jpg',
-    '/img/kyrgyfotos/GC2A2065.jpg',
-    '/img/kyrgyfotos/GC2A1667.jpg',
-    '/img/kyrgyfotos/GC2A1611.jpg',
-    '/img/kyrgyfotos/GC2A1907.jpg',
-    '/img/kyrgyfotos/GC2A0944.jpg',
-    '/img/kyrgyfotos/GC2A1044.jpg',
-    '/img/kyrgyfotos/GC2A0914.jpg',
-    '/img/kyrgyfotos/GC2A0900.jpg',
-    '/img/kyrgyfotos/GC2A0890.jpg',
-    '/img/kyrgyfotos/GC2A0950.jpg',
-    '/img/kyrgyfotos/GC2A0880.jpg',
-    '/img/kyrgyfotos/GC2A0921.jpg',
-    '/img/kyrgyfotos/GC2A0840.jpg',
-    '/img/kyrgyfotos/GC2A0835.jpg',
-    '/img/kyrgyfotos/GC2A0834.jpg',
-    '/img/kyrgyfotos/GC2A0861.jpg',
-    '/img/kyrgyfotos/GC2A0769.jpg',
-    '/img/kyrgyfotos/_C2A0734.jpg',
+    '/img/madagascarfotos/madagascar1.jpg',
+    '/img/madagascarfotos/madagascar2.jpg',
+    '/img/madagascarfotos/madagascar3.jpg',
+    '/img/madagascarfotos/madagascar4.jpg',
+    '/img/madagascarfotos/madagascar5.jpg',
+    '/img/madagascarfotos/madagascar6.jpg',
+    '/img/madagascarfotos/madagascar7.jpg',
+    '/img/madagascarfotos/madagascar8.jpg',
+    '/img/madagascarfotos/madagascar9.jpg',
+    '/img/madagascarfotos/madagascar10.jpg',
+    '/img/madagascarfotos/madagascar11.jpg',
+    '/img/madagascarfotos/madagascar12.jpg',
+    '/img/madagascarfotos/madagascar13.jpg',
+    '/img/madagascarfotos/madagascar14.jpg',
+    '/img/madagascarfotos/madagascar15.jpg',
+    '/img/madagascarfotos/madagascar16.jpg',
+    '/img/madagascarfotos/madagascar17.jpg',
+    '/img/madagascarfotos/madagascar18.jpg',
+    '/img/madagascarfotos/madagascar19.jpg',
+    '/img/madagascarfotos/madagascar20.jpg',
+    '/img/madagascarfotos/madagascar21.jpg',
+    '/img/madagascarfotos/madagascar22.jpg',
   ];
 
   const [lightboxImg, setLightboxImg] = useState(null);
@@ -41,7 +41,7 @@ export default function Cultura() {
   }, [lightboxImg]);
 
   return (
-    <Layout title="Cultura">
+    <Layout title="Madagascar">
       <main style={{ padding: '40px' }}>
 
         {/* Galería */}
@@ -52,7 +52,7 @@ export default function Cultura() {
               src={img}
               className={styles.image}
               onClick={() => setLightboxImg(img)}
-              alt={`Cultura ${index + 1}`}
+              alt={`Madagascar ${index + 1}`}
             />
           ))}
         </div>
@@ -66,7 +66,7 @@ export default function Cultura() {
             <img
               src={lightboxImg}
               className={styles.lightboxImage}
-              alt="Cultura Enlarged"
+              alt="Madagascar Enlarged"
             />
           </div>
         )}

@@ -57,7 +57,7 @@ export default function Xina() {
     <Layout title="Xina">
       <main style={{ padding: '40px' }}>
         {/* Galería */}
-        <div className={styles.galleryxina}>
+        <div className={styles.galleryfoto}>
           {images.map((img, index) => (
             <img
               key={index}

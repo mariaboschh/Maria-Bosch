@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
-import styles from './gallery.module.css'; // tu CSS de galería y lightbox
+import styles from './gallery.module.css';
 
 export default function Kyrgy() {
   const images = [
@@ -30,7 +30,6 @@ export default function Kyrgy() {
 
   const [lightboxImg, setLightboxImg] = useState(null);
 
-  // efecto seguro para SSR: añade clase al body solo si existe document
   useEffect(() => {
     if (typeof document !== 'undefined') {
       if (lightboxImg) {
@@ -42,17 +41,18 @@ export default function Kyrgy() {
   }, [lightboxImg]);
 
   return (
-    <Layout title="Xina">
+    <Layout title="Kyrgy">
       <main style={{ padding: '40px' }}>
+
         {/* Galería */}
-        <div className={styles.galleryxina}>
+        <div className={styles.galleryfoto}>
           {images.map((img, index) => (
             <img
               key={index}
               src={img}
               className={styles.image}
               onClick={() => setLightboxImg(img)}
-              alt={`Xina ${index + 1}`}
+              alt={`Kyrgy ${index + 1}`}
             />
           ))}
         </div>
@@ -63,9 +63,14 @@ export default function Kyrgy() {
             className={styles.lightbox}
             onClick={() => setLightboxImg(null)}
           >
-            <img src={lightboxImg} className={styles.lightboxImage} alt="Xina Enlarged" />
+            <img
+              src={lightboxImg}
+              className={styles.lightboxImage}
+              alt="Kyrgy Enlarged"
+            />
           </div>
         )}
+
       </main>
     </Layout>
   );

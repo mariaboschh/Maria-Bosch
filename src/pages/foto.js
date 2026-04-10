@@ -6,39 +6,57 @@ import styles from './styles.module.css';
 export default function Foto() {
   return (
     <Layout title="Foto">
-      <div
-        style={{
-          padding: '60px 40px',
-          minHeight: '100vh',
-          background: '#ffffff',
-        }}
-      >
-        {/* KYRGY */}
-        <Link to="/kyrgy">
-          <img
-            src={require('/img/sd kyrgy.png').default}
-            alt="SD Kyrgy"
-            className={styles.sdkyrgy}
-          />
-        </Link>
+      <div className={styles.page}>
 
-        {/* XINA */}
-        <Link to="/xina">
-          <img
-            src={require('/img/sd xina.png').default}
-            alt="SD Xina"
-            className={styles.sdxina}
-          />
-        </Link>
+        <div className={styles.containerSD}>
 
-        {/* CULTURA */}
-        <Link to="/cultura">
-          <img
-            src={require('/img/sd cultura.png').default}
-            alt="SD Cultura"
-            className={styles.sdcultura}
-          />
-        </Link>
+          {/* KYRGY */}
+          <Link to="/kyrgy">
+            <img
+              src={require('/img/sd kyrgy.png').default}
+              alt="SD Kyrgy"
+              className={styles.sdkyrgy}
+            />
+          </Link>
+
+          {/* XINA */}
+          <Link to="/xina">
+            <img
+              src={require('/img/sd xina.png').default}
+              alt="SD Xina"
+              className={styles.sdxina}
+            />
+          </Link>
+
+          {/* CULTURA */}
+          <Link to="/cultura">
+            <img
+              src={require('/img/sd cultura.png').default}
+              alt="SD Cultura"
+              className={styles.sdcultura}
+            />
+          </Link>
+
+          {/* MADAGASCAR */}
+          <Link to="/madagascar">
+            <img
+              src={require('/img/sd madagascar.png').default}
+              alt="SD Madagascar"
+              className={styles.sdmadagascar}
+            />
+          </Link>
+
+          {/* TANZANIA */}
+          <Link to="/tanzania">
+            <img
+              src={require('/img/sd tanzania.png').default}
+              alt="SD Tanzania"
+              className={styles.sdtanzania}
+            />
+          </Link>
+
+        </div>
+
       </div>
     </Layout>
   );
