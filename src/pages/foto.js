@@ -28,15 +28,16 @@ export default function Foto() {
             />
           </Link>
 
-          {/* CULTURA */}
-          <Link to="/cultura">
+                    {/* TANZANIA */}
+          <Link to="/tanzania">
             <img
-              src={require('/img/sd cultura.png').default}
-              alt="SD Cultura"
-              className={styles.sdcultura}
+              src={require('/img/sd tanzania.png').default}
+              alt="SD Tanzania"
+              className={styles.sdtanzania}
             />
           </Link>
 
+          
           {/* MADAGASCAR */}
           <Link to="/madagascar">
             <img
@@ -46,14 +47,16 @@ export default function Foto() {
             />
           </Link>
 
-          {/* TANZANIA */}
-          <Link to="/tanzania">
+
+          {/* CULTURA */}
+          <Link to="/cultura">
             <img
-              src={require('/img/sd tanzania.png').default}
-              alt="SD Tanzania"
-              className={styles.sdtanzania}
+              src={require('/img/sd cultura.png').default}
+              alt="SD Cultura"
+              className={styles.sdcultura}
             />
           </Link>
+
 
         </div>
 

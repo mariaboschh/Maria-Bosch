@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
+/* ========================= */
+/* VARIABLES
+/* ========================= */
+
 :root {
   --ifm-color-primary: hsl(0, 0%, 17%);
   --ifm-color-primary-dark: hsl(0, 0%, 12%);
@@ -13,18 +17,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
+/* ========================= */
+/* NAVBAR BASE
+/* ========================= */
 
-/* NAVBAR BASE */
 .navbar {
   background-color: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(10px);
@@ -46,13 +42,11 @@
   width: 100%;
 }
 
-/* CENTRO → MARIABOSCH */
+/* CENTRO */
 .navbar__brand {
   position: absolute !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  margin: 0 !important;
-  padding: 0 !important;
   z-index: 10;
 }
 
@@ -65,184 +59,107 @@
 .navbar__title {
   font-family: 'VERDANA', monospace !important;
   font-weight: 650 !important;
-  letter-spacing: 0.03em !important;
   font-size: clamp(1.5rem, 2vw, 2.5rem) !important;
-  color: #000000 !important;
-  text-decoration: none !important;
-  margin: 0 !important;
   white-space: nowrap !important;
 }
 
-.navbar__title:hover {
-  color: var(--ifm-color-primary-light) !important;
+/* ========================= */
+/* DESKTOP CUSTOM LAYOUT
+/* ========================= */
+
+@media (min-width: 769px) {
+
+  .navbar__items {
+    display: contents;
+  }
+
+  .navbar__link {
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .navbar__link[href="/foto"] {
+    left: 25%;
+  }
+
+  .navbar__link[href="/video"] {
+    left: 75%;
+  }
 }
 
-/* 🔥 SOLUCIÓN FINAL POSICIONAMIENTO */
-.navbar__items {
-  display: contents;
-}
+/* ========================= */
+/* ESTILO LINKS
+/* ========================= */
 
-.navbar__link {
-  position: absolute;
-  transform: translateX(-50%);
-  margin: 0;
-  white-space: nowrap;
-}
-
-/* FOTO → 25% */
-.navbar__link[href="/foto"] {
-  left: 25%;
-}
-
-/* VIDEO → 75% */
-.navbar__link[href="/video"] {
-  left: 75%;
-}
-
-/* ESTILO LINKS */
 .navbar__item {
   font-family: 'VERDANA', sans-serif !important;
   font-weight: 500 !important;
-  font-size: 1rem !important;
-  letter-spacing: 0.5px !important;
-  color: var(--ifm-color-primary) !important;
-  transition: all 0.3s ease !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 8px !important;
 }
 
-.navbar__item:hover {
-  background-color: rgba(0, 0, 0, 0.05) !important;
-  color: var(--ifm-color-primary-light) !important;
+/* ========================= */
+/* 🔥 FIX CRÍTICO: ELIMINAR MOBILE SYSTEM
+/* ========================= */
+
+/* quitar hamburger */
+.navbar__toggle {
+  display: none !important;
 }
 
-[data-theme='dark'] .navbar__item:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+/* quitar sidebar entero */
+.navbar-sidebar {
+  display: none !important;
 }
 
-/* FONDO FIJO */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 86px;
-  background-color: #ffffff;
-  z-index: -1;
+.navbar-sidebar__brand {
+  display: none !important;
 }
 
-[data-theme='dark'] body::before {
-  background-color: #000000;
-}
+/* ========================= */
+/* MOBILE LIMPIO (SIN DOCUSAURUS SWITCH)
+/* ========================= */
 
-main {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 60px !important;
-  min-height: calc(100vh - 146px);
-}
+@media (max-width: 768px) {
 
-/* RESPONSIVE */
-@media (max-width: 996px) {
+  /* mantener estructura real de Docusaurus */
+  .navbar__items {
+    display: flex !important;
+    flex: 1;
+  }
+
+  /* links visibles */
+  .navbar__item {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    /* 🔥 tamaño equilibrado */
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0.5rem !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  /* links */
+  .navbar__link {
+    position: static !important;
+    transform: none !important;
+    display: inline-flex !important;
+  }
+
+  /* centro fijo */
+  .navbar__brand {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* título un poco más grande */
+  .navbar__title {
+    font-size: 1rem !important;
+    white-space: nowrap;
+  }
+
+  /* evitar compresión */
   .navbar {
-    border-radius: 16px;
-    max-width: calc(100% - 24px);
-    margin: 0 auto;
-    top: 8px;
+    overflow: visible !important;
   }
-
- body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--ifm-navbar-height); /* 👈 clave */
-  background-color: #ffffff;
-  z-index: 0;
-}
-
-  .navbar__title {
-    font-size: 1.3rem !important;
-  }
-
-  .navbar__item {
-    font-size: 0.85rem !important;
-    padding: 0.4rem 0.8rem !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar__title {
-    font-size: 1.1rem !important;
-  }
-
-  .navbar__item {
-    font-size: 0.75rem !important;
-    padding: 0.3rem 0.6rem !important;
-  }
-}
-
-/* FOOTER (igual que tenías) */
-.footer {
-  position: relative !important;
-  height: 40px !important;
-  padding: 8px 0 !important;
-  background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-  z-index: 1000 !important;
-}
-
-.footer__container {
-  max-width: 100% !important;
-  padding: 0 20px !important;
-  margin: 0 auto !important;
-}
-
-.footer__links {
-  display: flex !important;
-  justify-content: center;
-  gap: 20px; /* espacio entre los links */
-  margin-bottom: 4px;
-}
-
-.footer__copyright {
-  text-align: center !important;
-  font-size: 0.8rem !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  color: #666 !important;
-  font-family: 'Montserrat', sans-serif !important;
-}
-
-[data-theme='dark'] .footer {
-  background: rgba(26, 26, 26, 0.95) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-theme='dark'] .footer__copyright {
-  color: #aaa !important;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    height: 35px !important;
-    padding: 5px 0 !important;
-  }
-
-  .footer__copyright {
-    font-size: 0.7rem !important;
-  }
-
-  main {
-    margin-bottom: 50px !important;
-  }
-}
-
-/* Ocultar navbar cuando lightbox está activo */
-body.lightbox-active .navbar {
-  display: none;
 }
