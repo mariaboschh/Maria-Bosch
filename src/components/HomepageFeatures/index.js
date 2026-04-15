@@ -2,28 +2,27 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHero() {
 
   const scrollToBottom = () => {
-    const offset = 150;
+    const menuSection = document.querySelector(`.${styles.menu}`);
 
-    const scrollTarget =
-      document.body.scrollHeight - window.innerHeight - offset;
-
-    window.scrollTo({
-      top: scrollTarget,
-      behavior: 'smooth',
-    });
+    if (menuSection) {
+      menuSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   };
 
   return (
     <>
-      {/* SECCIÓN 1: Hero con video de fondo */}
+      {/* HERO */}
       <section className={styles.hero}>
         <video className={styles.videoBg} autoPlay loop muted playsInline>
-          <source src="/img/loop video.mp4" type="video/mp4" />
-          Tu navegador no soporta video HTML5.
+          <source src={useBaseUrl('/img/loop video.mp4')} type="video/mp4" />
         </video>
 
         <div
@@ -31,28 +30,26 @@ function HomepageHero() {
           onClick={scrollToBottom}
           style={{ cursor: 'pointer' }}
         >
-          <img src="/img/fletxa.png" alt="scroll down" />
+          <img src={useBaseUrl('/img/fletxa.png')} alt="scroll down" />
         </div>
       </section>
 
-      {/* SECCIÓN 2: Menú */}
+      {/* MENU */}
       <section className={styles.menu}>
         <div className="menu">
           <div className={styles.inner}>
 
-            {/* FOTO */}
             <Link to="/foto">
               <img
-                src={require("/img/polaroid foto.png").default}
+                src={useBaseUrl('/img/polaroid foto.png')}
                 alt="polaroid foto"
                 className={styles.polaroidfoto}
               />
             </Link>
 
-            {/* VIDEO */}
             <Link to="/video">
               <video
-                src={require("/img/video old.mp4").default}
+                src={useBaseUrl('/img/video old.mp4')}
                 autoPlay
                 muted
                 loop
@@ -60,10 +57,6 @@ function HomepageHero() {
                 className={styles.videoold}
               />
             </Link>
-
-            <div className={styles.galeria}>
-              {/* Galería content */}
-            </div>
 
           </div>
         </div>

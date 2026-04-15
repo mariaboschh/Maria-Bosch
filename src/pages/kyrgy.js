@@ -1,31 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import styles from './gallery.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Kyrgy() {
   const images = [
-    '/img/kyrgyfotos/GC2A1775.jpg',
-    '/img/kyrgyfotos/GC2A1760.jpg',
-    '/img/kyrgyfotos/GC2A1322.jpg',
-    '/img/kyrgyfotos/GC2A1331.jpg',
-    '/img/kyrgyfotos/GC2A2065.jpg',
-    '/img/kyrgyfotos/GC2A1667.jpg',
-    '/img/kyrgyfotos/GC2A1611.jpg',
-    '/img/kyrgyfotos/GC2A1907.jpg',
-    '/img/kyrgyfotos/GC2A0944.jpg',
-    '/img/kyrgyfotos/GC2A1044.jpg',
-    '/img/kyrgyfotos/GC2A0914.jpg',
-    '/img/kyrgyfotos/GC2A0900.jpg',
-    '/img/kyrgyfotos/GC2A0890.jpg',
-    '/img/kyrgyfotos/GC2A0950.jpg',
-    '/img/kyrgyfotos/GC2A0880.jpg',
-    '/img/kyrgyfotos/GC2A0921.jpg',
-    '/img/kyrgyfotos/GC2A0840.jpg',
-    '/img/kyrgyfotos/GC2A0835.jpg',
-    '/img/kyrgyfotos/GC2A0834.jpg',
-    '/img/kyrgyfotos/GC2A0861.jpg',
-    '/img/kyrgyfotos/GC2A0769.jpg',
-    '/img/kyrgyfotos/_C2A0734.jpg',
+    useBaseUrl('/img/kyrgyfotos/GC2A1775.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1760.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1322.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1331.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A2065.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1667.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1611.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1907.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0944.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A1044.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0914.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0900.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0890.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0950.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0880.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0921.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0840.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0835.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0834.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0861.jpg'),
+    useBaseUrl('/img/kyrgyfotos/GC2A0769.jpg'),
+    useBaseUrl('/img/kyrgyfotos/_C2A0734.jpg'),
   ];
 
   const [lightboxImg, setLightboxImg] = useState(null);
